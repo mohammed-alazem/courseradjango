@@ -26,5 +26,5 @@ def index(request):
     return render(request, 'polls/index.html', context)
 
 
-def owner(request):
+def owner(request,question_id):
     return HttpResponse("Hello, world. c414093e is the polls index.")
