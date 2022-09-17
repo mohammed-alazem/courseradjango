@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
-    "polls.apps.PollsConfig",
+    "polls",
 ]
 
 MIDDLEWARE = [
@@ -93,9 +93,13 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 MAX_CONN_AGE = 600
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbc7rke6sbv2qo',
+        'USER': 'jckxwwbbrohbrr',
+        'PASSWORD': '47742f50ec0f7b3e3eb7e3359fb57ce5fbae162575f38c0bdc17a9eb0cb6c23b',
+        'HOST': 'ec2-52-207-90-231.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
