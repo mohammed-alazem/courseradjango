@@ -8,7 +8,8 @@ from polls.models import Question
 # Create your views here.
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
+    # return render(request, 'polls/detail.html', {'question': question})
+    return HttpResponse("Answer to the Ultimate Question.")
 
 
 def results(request, question_id):
@@ -26,5 +27,5 @@ def index(request):
     return render(request, 'polls/index.html', context)
 
 
-def owner(request,question_id):
+def owner(request, question_id):
     return HttpResponse("Hello, world. c414093e is the polls index.")
